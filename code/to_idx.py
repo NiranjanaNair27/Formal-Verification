@@ -5,8 +5,8 @@ import numpy as np
 import struct
 
 # Define the directory with images and the number of images to convert
-image_dir = "path_to_images"  # Replace with your image directory
-num_images_to_convert = 5     # Change this to how many images you want to process
+image_dir ="code/dataset/traffic_light_data/train/not red"  # Replace with your image directory
+num_images_to_convert = 10     # Change this to how many images you want to process
 output_file = "output.idx"    # Output .idx file name
 
 # Function to write image data to .idx format
