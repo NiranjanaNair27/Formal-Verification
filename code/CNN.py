@@ -33,7 +33,7 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 print("training set generation...")
 # Training data
 train_set = train_datagen.flow_from_directory(
-    'dataset/traffic_light_data/train/',       # Path to training set
+    'code/dataset/traffic_light_data/train/',       # Path to training set
     target_size=(64, 64),  # Resize images to 64x64
     batch_size=32,
     classes=['red', 'not red'],  # Include all three classes, we'll adjust labels later
@@ -44,7 +44,7 @@ train_set = train_datagen.flow_from_directory(
 print("test dataset generation...")
 # Test/validation data
 test_set = test_datagen.flow_from_directory(
-    'dataset/traffic_light_data/val/',        # Path to test set
+    'code/dataset/traffic_light_data/val/',        # Path to test set
     target_size=(64, 64),
     batch_size=32,
     classes=['red', 'not red'],
