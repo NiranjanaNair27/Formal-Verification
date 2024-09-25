@@ -1,4 +1,4 @@
-from maraboupy import Marabou
+f'''rom maraboupy import Marabou
 
 # Load your model (assuming it's in ONNX format)
 network = Marabou.read_onnx('path/to/your/model.onnx')
@@ -32,5 +32,5 @@ result = network.verify()
 if result.is_satisfiable():
     print("There exists a perturbation that changes the classification.")
 else:
-    print("The model is robust to perturbations within the specified range.")
+    print("The model is robust to perturbations within the specified range.")'''
 
