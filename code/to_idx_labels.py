@@ -2,7 +2,7 @@ import numpy as np
 import struct
 
 # Define your labels
-num_labels = 5  # Number of labels/images
+num_labels = 2  # Number of labels/images
 label_class = 0  # Assuming all labels belong to the same class
 
 # Create an array of labels (all the same class)

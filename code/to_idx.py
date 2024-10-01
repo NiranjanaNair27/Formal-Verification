@@ -6,8 +6,8 @@ import struct
 
 # Define the directory with images and the number of images to convert
 image_dir = "code/dataset/traffic_light_data/train/red/"  # Replace with your image directory
-num_images_to_convert = 5     # Change this to how many images you want to process
-output_file = "output.idx"    # Output .idx file name
+num_images_to_convert = 2     # Change this to how many images you want to process
+output_file = "output_28.idx"    # Output .idx file name
 
 # Function to write image data to .idx format
 def save_to_idx(images, labels, output_file):
@@ -42,8 +42,8 @@ for image_name in selected_images:
     image_array = np.array(image)
     
     # Ensure all images are the same size (resize if necessary)
-    if image_array.shape != (64, 64, 3):  # Example: (28, 28, 3) is for RGB images of size 28x28
-        image = image.resize((64, 64))  # Resize if necessary
+    if image_array.shape != (28, 28, 3):  # Example: (28, 28, 3) is for RGB images of size 28x28
+        image = image.resize((28, 28))  # Resize if necessary
         image_array = np.array(image)
 
     image_array = image_array / 255.0

@@ -13,7 +13,7 @@ model = Sequential([
     
     Flatten(),
     #Dropout(0.5),  # Helps with overfitting
-    Dense(1, activation='relu')  # Binary classification (red or not red)
+    Dense(1, activation=None)  # Binary classification (red or not red)
 ])
 
 # Compile the model
@@ -65,4 +65,4 @@ history = model.fit(
 test_loss, test_acc = model.evaluate(test_set, verbose=2)
 print(f"Test Accuracy: {test_acc * 100:.2f}%")
 
-model.save('model.keras')
+model.save('model_28.h5')

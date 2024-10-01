@@ -1,4 +1,4 @@
-type Image = Tensor Rat [64, 64]
+type Image = Tensor Rat [28, 28]
 
 -- The type of the output labels
 -- i.e a number between 0 and 9, one for each digit
