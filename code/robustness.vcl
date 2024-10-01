@@ -1,21 +1,21 @@
-type Image = Tensor Rat [28, 28]
+type Image = Tensor Rat [64, 64]
 
 -- The type of the output labels
 -- i.e a number between 0 and 9, one for each digit
-type Label = Index 10
+type Label = Index 2
 
 -- A predicate that states that all the pixel values in a given image are
 -- in the range 0.0 to 1.0
 validImage : Image -> Bool
-validImage x = forall i j . 0 <= x ! i ! j <= 1
+validImage x = forall i j . 0.0 <= x ! i ! j <= 1.0
 
 --------------------------------------------------------------------------------
 -- Network
 
 -- Declare the network used to classify images. The output of the network is a
--- score for each of the digits 0 to 9.
+-- score for each of the digits.
 @network
-classifier : Image -> Vector Rat 10
+classifier : Image -> Vector Rat 2
 
 -- The classifier advises that input image `x` has label `i` if the score
 -- for label `i` is greater than the score of any other label `j`.
